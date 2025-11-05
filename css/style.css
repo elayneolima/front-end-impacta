@@ -1,13 +1,9 @@
-.link{
-    color: brown;
-    font-size: 25px;
-    text-decoration: none;
+.header {
+    display: flex;
+    justify-content: space-between;
 }
 
-.service{
-    color: green;
-}
+.li{
+    display: flex;
 
-div a{
-    color: aquamarine;
 }
