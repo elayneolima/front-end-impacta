@@ -1,8 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+}
 .header {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .listas{
     display: flex;
+    list-style-type:none;
+    justify-content: center;
+    width: 100%;
 }
+
+.item{
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    font-size: 16px;
+}
+
+.listas li {
+    margin: 5px ;
+}
+
+.btn-green{
+    background-color: #36B864;
+    color: #ffffff;
+    border: transparent;
+    height: 48px;
+    width: 159px;
+    border-radius: 10px;
+    padding: 10px 20px 10px 20px;
+}
+
+
+/* O box-sizing é como reservar x px para recalcular o tamanho do conteudo */
