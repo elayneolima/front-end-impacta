@@ -1,11 +1,90 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.header{
+    display: flex; /*Flex é adicionado somente no elemento pai para poder mexer na posição dos elementos filhos em relação ao elemento pai.*/ 
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.menu-itens{
+    display: flex; /*display flex adicionado ao pai ul para alinhar os filhos em row*/
+    list-style-type: none; /*remove ou altera os marcadores da lista*/
+    justify-content: center;
+}
+
+.item{
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    font-size: 16px;
+}
+
+.menu-itens li {
+    margin: 2px;
+}
+
+.get-a-quote{
+    width: 149px;
+    height: 48px;
+    background-color: #36B864;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+html{
+    font-size: 10px;
+}
+
+@font-face {
+    font-family: sauce;
+    src: url(../fonts/pepper-sauce.ttf);
+}
+
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-size: 100%;
 }
+
+
+
 .header {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+}
+    
+
+.menu{width: 40%;
+}
+
+.screen{
+    background-color: blue;
+    width: 500px;
+    height: 300px;
+    position: absolute;
 }
 
 .listas{
@@ -19,7 +98,10 @@
     text-decoration: none;
     padding: 10px;
     display: block;
-    font-size: 16px;
+    font-size:1.6rem;
+    font-family: 'sauce', sans-serif;
+
+    
 }
 
 .listas li {
@@ -35,10 +117,14 @@
     border-radius: 10px;
     padding: 10px 20px;
     cursor: pointer;
+    text-align: center;
+    text-shadow: 2px 2px 10px #11351e;
 }
 .btn-green:hover{
-    background-color: #256c3f;
+    background-color: var(--cor--proclean--green);
 }
 
 
-/* O box-sizing é como reservar x px para recalcular o tamanho do conteudo */
+
+
+O box-sizing é como reservar x px para recalcular o tamanho do conteudo */
