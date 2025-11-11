@@ -1,12 +1,21 @@
-*{
+*{ /*é uma padronização de configuração para todos os elementos da página*/
     padding: 0;
     margin: 0;
+    
+    /*Box Sizing é o tamanno da caixa, aqui dizemos para ele que, para o tamanho das nossas caixas, usamos as bordas delas.*/
+    /*Necessitamos de atenção para calcula a largura da caixa + a borda para saber o tanto que está colocando no total e isso pode vazar*/
+    /*Quando configuramos o box-sizing border box, o tamanho da caixa passa a ser 149 já com o padding, border e width juntos, sem somar estes ao width depois.*/
+    /* width: 149px;   */
+    /*Quando usamos box-sizing: border-box, o navegador mantém o tamanho total da caixa fixo (por exemplo, 100px), e aí ele diminui a área do conteúdo automaticamente pra que o padding e a borda caib*/
+    box-sizing: border-box;
 }
 
+/*Elementos do Header - Cabeçalho*/
 .header{
-    display: flex; /*Flex é adicionado somente no elemento pai para poder mexer na posição dos elementos filhos em relação ao elemento pai.*/ 
+    display: flex; /*Flex é adicionado somente no elemento pai para poder mexer na posição dos elementos filhos em relação ao elemento pai, os deixa mais flexíveis.*/ 
     justify-content: space-around;
     align-items: center;
+    margin-top: 10px;
 }
 
 
@@ -27,12 +36,18 @@
     margin: 2px;
 }
 
-.get-a-quote{
-    width: 149px;
-    height: 48px;
-    background-color: #36B864;
+.btn-green{
+    background-color: #36B864;/*Aplica cor de fundo para o elemento selecionado*/
+    border: none; /*Remove a borda do botão que é aplicado automaticamente pelo navegador*/
+    color: #ffffff; /*Aplica cor no texto*/
+    border-radius: 5px; /*Arredondamento dos cantos da borda*/
+    padding: 20px 30px; /*Espaçamentos diferentes para os lados, top, right, bot, left, colocando somente dois valores, ele entende que é 10px para top e bot e 20 para right e left */
+    cursor: pointer;
 }
 
+.btn-green:hover{
+    background-color: #6cb785;
+}
 
 
 
