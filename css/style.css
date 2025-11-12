@@ -14,12 +14,34 @@ html{
     font-size: var(--font-size);
 }
 
+/* importação de fontes baixadas */
+
+@font-face{
+    font-family: playfair;
+    src: url(../fonts/NotoSerif-VariableFont_wdth\,wght.ttf);
+}
+
+/* header{
+    background-color: aquamarine;
+    position: absolute;
+    width: 100%;
+    box-shadow: 1px 1px 5px #000000;
+} */
+
 /*Elementos do Header - Cabeçalho*/
 .header{
     display: flex; /*Flex é adicionado somente no elemento pai para poder mexer na posição dos elementos filhos em relação ao elemento pai, os deixa mais flexíveis.*/ 
     justify-content: center;
     align-items: center;
-    margin-top: 10px;
+  
+
+    /* margin-top: 10px; */
+}
+
+.container{
+    max-width: 90%; /**/
+    margin: auto;
+
 }
 
 .menu{
@@ -27,19 +49,31 @@ html{
     width: 52%;
 }
 
+/* .sub-menu{
+    display: none;
+}
+
+.ativa-menu:hover .sub-menu{
+    display: block;
+    position: absolute;
+} */
+
 .menu-itens{
     display: flex; /*display flex adicionado ao pai ul para alinhar os filhos em row*/
     list-style-type: none; /*remove ou altera os marcadores da lista*/
     justify-content: center;
+
 }
 
 
 .item{
     text-decoration: none;
-    padding: 10px;
+    margin: 12px 12px;
     display: block;
     font-size: 1rem;
     color: var(--cor-proclean-grey);
+    font-family: playfair;
+    font-weight: 700; /*permite deixar a font mais "cheia"*/
 }
 
 .active{
@@ -47,9 +81,9 @@ html{
     /* color: #36B864; Como os dois itens estão usando classe, o navegador prioriza o que está por ultimo pois os dois estão sendo selecionados pela classe, esse é um caso que a especificidade nao funciona e sim a ordem */
 }
 
-.item:hover{
+/* .item:hover{
     color: var(--cor-proclean-lil);
-}
+} */
 
 .menu-itens li {
     margin: 2px;
@@ -63,16 +97,60 @@ html{
     padding: 12px 32px; /*Espaçamentos diferentes para os lados, top, right, bot, left, colocando somente dois valores, ele entende que é 10px para top e bot e 20 para right e left */
     cursor: pointer;
     font-size: 1rem;
+    font-family: playfair;
+    width: 159px;
+    height: auto; /* altura fixa não é recomendada, apesar de que é possível definir. Auto é o melhor valor pois ele se adapta conforme o conteudo dentro do elemento. */
+                /*Position fixed nao se move com a barra de rolagem, o absolute sim*/
+    /* text-shadow: -1px 1px 2px #000000 ; */
+    /* box-shadow: 0 1px 1px #000000; */
+    /* line-height: ;  - Ajusta altura/espaço entre as linhas do texto*/
+    /* text-align: ;   - Alinha o texto em diferentes direções */
+    /* max-height define uma altura maxima*/
+    /* min-height defini uma alura minima*/
 }
 
 .btn-green:hover{
-    background-color: #6cb785; 
+    /* background-color: #6cb785;  */
+    text-shadow: 0 0 2px #000000 ;
 
 }
 
+.logo{
+    height: auto; /*auto para imagens, automaticamente ela reflete o tamanho da tela do dispositivo, pois é responsiva*/
+    /* border: 2px #000000 solid ; */
+    /* border-radius: 10px 20px; */
+    /* display: none; - Serve para esconder um elemento */
+}
 
+.main-image{
+    height: 500px;
+    background-image: url(../images/Hero\ Iamge.svg);
+    background-repeat: no-repeat;
+}
 
+/* Trabalhando com position
+.screen{
+    background-color: rgba(0, 0, 0, 0.7);  */
+    /* position: absolute; O navegador entende que o elemente pode flutuar sobre os outros elementos, é como se ele estive uma camada a frente */
+    /* top: 15; Podemos movimentar um elemento na vertical, para cima e para baixo */
+    /* left: 600px; */
+    /* position: relative; */
+    /* position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%; */
+    /* z-index: 10; permite mover elementos no position para frente ou para tras */
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+} */
 
+/* .modal{
+    background-color: blue;
+    width: 50%;
+    height: 50%;
+    
+} */
 
 
 
