@@ -33,6 +33,7 @@ html{
     display: flex; /*Flex é adicionado somente no elemento pai para poder mexer na posição dos elementos filhos em relação ao elemento pai, os deixa mais flexíveis.*/ 
     justify-content: center;
     align-items: center;
+    padding: 20px 0;
   
 
     /* margin-top: 10px; */
@@ -40,6 +41,7 @@ html{
 
 .container{
     max-width: 90%; /**/
+    /* background-color: aquamarine; */
     margin: auto;
 
 }
@@ -67,7 +69,7 @@ html{
 
 
 .item{
-    text-decoration: none;
+    /* text-decoration: none; - Já está na classe btn */
     margin: 12px 12px;
     display: block;
     font-size: 1rem;
@@ -89,6 +91,11 @@ html{
     margin: 2px;
 }
 
+h1{
+    font-size: 2.5rem;
+    width: 50%;
+}
+
 .btn-green{
     background-color: var(--cor-proclean-green);/*Aplica cor de fundo para o elemento selecionado*/
     border: none; /*Remove a borda do botão que é aplicado automaticamente pelo navegador*/
@@ -98,9 +105,10 @@ html{
     cursor: pointer;
     font-size: 1rem;
     font-family: playfair;
-    width: 159px;
+    width: 180px;
     height: auto; /* altura fixa não é recomendada, apesar de que é possível definir. Auto é o melhor valor pois ele se adapta conforme o conteudo dentro do elemento. */
                 /*Position fixed nao se move com a barra de rolagem, o absolute sim*/
+    text-decoration: none;
     /* text-shadow: -1px 1px 2px #000000 ; */
     /* box-shadow: 0 1px 1px #000000; */
     /* line-height: ;  - Ajusta altura/espaço entre as linhas do texto*/
@@ -122,12 +130,46 @@ html{
     /* display: none; - Serve para esconder um elemento */
 }
 
-.main-image{
-    height: 500px;
+.main-clean{
+    height: auto;/*Altura fixa não é recomendada*/
     background-image: url(../images/Hero\ Iamge.svg);
     background-repeat: no-repeat;
+    width: 80%; /*Não é a melhor opção porque a imagem é um background e diminuido o width diminui/corta a imagem*/
+    margin: auto;
+    background-size: cover; /*Ajusta a imagem de funto ao tamanho da DIV*/
+    /* background-color: rgb(43, 255, 0); */
 }
 
+.main-content{
+    width: 80%;
+    font-family: playfair;
+    padding: 65px 0 55px 180px ;
+ 
+}
+
+.main-content > p:first-child /*Pega o primeiro filho dessa classe, ou seja, o primeiro p nesse caso, tambem temos o last-child*/ {
+    font-size: 1.2rem;
+    color: var(--cor-proclean--green-dark);
+    
+}
+
+.main-content > p:last-of-type {
+    font-size: 1rem;
+    color: var(--cor-proclean-grey);
+    width: 51%;
+    padding: 24px 0 40px 0;
+
+}
+
+.main-buttons > a {
+    display: block;
+}
+
+.main-buttons{
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+}
 /* Trabalhando com position
 .screen{
     background-color: rgba(0, 0, 0, 0.7);  */
@@ -164,80 +206,3 @@ html{
 
 
 
-/* 
-html{
-    font-size: 10px;
-}
-
-@font-face {
-    font-family: sauce;
-    src: url(../fonts/pepper-sauce.ttf);
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-size: 100%;
-}
-
-
-
-.header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-    
-
-.menu{width: 40%;
-}
-
-.screen{
-    background-color: blue;
-    width: 500px;
-    height: 300px;
-    position: absolute;
-}
-
-.listas{
-    display: flex;
-    list-style-type:none;
-    justify-content: center;
-    width: 100%;
-}
-
-.item{
-    text-decoration: none;
-    padding: 10px;
-    display: block;
-    font-size:1.6rem;
-    font-family: 'sauce', sans-serif;
-
-    
-}
-
-.listas li {
-    margin: 5px ;
-}
-
-.btn-green{
-    background-color: #36B864;
-    color: #ffffff;
-    border: transparent;
-    height: 48px;
-    width: 159px;
-    border-radius: 10px;
-    padding: 10px 20px;
-    cursor: pointer;
-    text-align: center;
-    text-shadow: 2px 2px 10px #11351e;
-}
-.btn-green:hover{
-    background-color: var(--cor--proclean--green);
-}
-
-
-
-
-O box-sizing é como reservar x px para recalcular o tamanho do conteudo */
