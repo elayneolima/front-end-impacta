@@ -232,4 +232,10 @@ h1{
     padding-top: 20px;
 }
 
+.card-section{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 0px 0px 0px;
+}
+
 
