@@ -139,7 +139,7 @@
     <script src="../js/bootstrap.bundle.js"></script>
     <!-- <script src="../js/bootstrap.esm.js"></script> -->
     <script src="../js/bootstrap.js"></script>
-    <script src="../js/introducao.js"></script>
+    <script src="../js/exercicio1.js"></script>
 
     <script>
         // console.log('hello, wolrd!');
@@ -152,19 +152,114 @@
 
         //concatenação ou interpolação
         // Js é case sensitive, n e N são diferentes, por exemplo.
-        var firstName = "Camila";
-        var lastName  = "da Silva";
+        // var firstName = "Camila";
+        // var lastName  = "da Silva";
 
         //há duas maneiras de concatenar
         //+ Serve para Juntar, quando o js encontrar strings ele entende que deve juntar
         //A interpolação funciona usando crases `${nomeDaVariavel} ${nomeDaOutraVariavel}`
-        var nomeCompletoC = firstName + ' ' +lastName;
-        var nomeCompletoI = `${firstName} ${lastName}`; // mais recomendado
+        // var nomeCompletoC = firstName + ' ' +lastName;
+        // var nomeCompletoI = `${firstName} ${lastName}`; // mais recomendado
 
-        console.log(nomeCompletoI);
-        console.log(nomeCompletoC);
+        // console.log(nomeCompletoI);
+        // console.log(nomeCompletoC);
+
+        //operadores relacionais
+        /* == compara os valores, mas quando tem uma string com numero, por exemplo, ele nao cnosegue entender
+           === compara os tipos 
+           != compara se os valores são diferentes
+           !== compara o valor e o tipo
+           >= Maior ou igual que
+           > maior que
+           < menor que
+           <=menor ou igual
+        */
+
+        // var val1 = +'10'; //operador unario faz conversão de tipo, exemplo, + '10' está forçando a conversao dessa string para numero. 
+        // var val2 = 10; 
+
+        // var comparar = val1 !== val2;
+        
+        //usando o unario, a soma dessas duas variaveis é possível, pois o val1 foi convertido antes da soma.
+        // var soma = val1 + val2;
+        // console.log(soma);
 
 
+        // sempre que voce faz uma comparacao ele retorna um bool
+        // console.log(comparar);
+
+        /*truthy e Falsy
+        se refere na forma como os valores são avaliados em contextos booleanos
+        
+        */ 
+        // var contrato = true; 
+        // console.log(!contrato); 
+
+
+        //estrutura de seleção
+
+        // var notaAluno = 10;
+        // var nomeAluno = 'Andrey Bastos'
+        // var faltaAluno = 10;
+
+        //se o usuario/aluno tiver uma nota >= 7 então Aprovado
+        //se menor que 7 então, reprovado 
+        //se a nota >= 5
+        //se faltas 
+
+
+        //estrutura de seleção simples
+        // if(notaAluno >= 7){
+        //     console.log("Aprovado!");
+        // }
+
+        // //composta
+        // if(notaAluno >= 7){
+        //     console.log("Aprovado!");
+        // }else{
+        //     console.log("Reprovado!")
+        // }
+
+        // //encadeada
+        //  if(!(notaAluno) >= 7){
+        //     console.log("Aprovado!");
+        // }else if(notaAluno >= 5){
+        //     console.log("recuperação");
+        // }
+        // else{
+        //     console.log("Resprovado!");
+        // }
+
+        //operadores logicos para mais de uma comparação
+
+        // V && F = F
+
+        //|| ou pelo menos uma deve ser verdadeira
+        //&& E as duas devem ser verdadeiras
+        //! Não inverte 
+
+        // if(notaAluno >=7 && !(faltaAluno esse parenteses da preferencia) <= 5){
+        //     console.log("Aprovado")
+        
+        
+        //Condicional Ternario, ele faz um if e else com mais simplicidade
+        // var resultado; 
+
+        // resultado = notaAluno >= 7 ? 'Aprovado' : 'Reprovado' 
+
+        // console.log(resultado);
+
+
+        // como pegar dados de um usuário? 
+        // OBS.: Não é um recurso mais utilizado no JS
+
+        // var nomeDoCliente = prompt('digite seu nome: ')
+        // var nomeDoCliente = prompt('digite seu sobrenome: ')
+        // console.log(nomeDoCliente);
+        
+
+
+    
     </script>
 </body>
 
