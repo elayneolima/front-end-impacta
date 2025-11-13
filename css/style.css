@@ -234,14 +234,20 @@ h1{
 
 .card{
     border: none;
+    width: 50%;
 }
 .card-section{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     padding-top: 40px ;
     margin: auto;
     width: 63%;
 }
 
+.card-section img{
+    width: 80%;
+}
 
-
+.card-text{
+    width: 80%;
+}
