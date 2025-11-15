@@ -242,6 +242,10 @@ h1{
     padding-left: 0;
 }
 
+.card-body p{
+    color: var(--cor-proclean-grey);
+}
+
 .card-section{
     display: flex;
     justify-content: center;
@@ -254,8 +258,6 @@ h1{
     width: 80%;
     /* margin: auto; */
 }
-
-
 
 .group > a{
     display: block;
