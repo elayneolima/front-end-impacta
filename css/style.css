@@ -34,6 +34,8 @@ html{
     justify-content: center;
     align-items: center;
     padding: 20px 0;
+    width: 80%;
+    margin: auto;
   
 
     /* margin-top: 10px; */
@@ -251,7 +253,7 @@ h1{
     justify-content: center;
     padding-top: 40px ;
     margin: auto;
-    width: 63%;
+    width: 70%;
 }
 
 .card-section > img{
@@ -276,7 +278,7 @@ h1{
     justify-content: space-around;
     align-items: flex-start;
     padding-top: 150px ;
-    width: 74%;
+    width: 88%;
     margin: auto;
 }
 
