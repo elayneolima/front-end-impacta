@@ -1,96 +1,58 @@
-/*
-Exercicio 1, JS basico Desenvolva um sistema de compra onde o usuario digitará: 
-Nome do Cliente 
-Nome do produto 
-Quantidade que comprou 
-Valor de uma unidade 
 
 
-Seu programa deverá Calcular o total da comrpa e impromir as informações da compra: 
+(function (calc) {
+    let interromper = true;
+    while(interromper) {
+        const imposto = 0.2;
+        const produtos = [
+            ['Sabão', 2.00], // cod 1
+            ['Leite', 5.00], // cod 2
+            ['Açucar',5.50], // cod 3
+        ];
+        const dados = [];
+        const mensagens = [
+            'codigo do produto',
+            'digite a quantidade',
+        ];
 
-Exemplo de saida 
+        // alert('produto não existe');
+    
+        for(let i = 0; i < mensagens.length; i++) {
+            let dado = prompt(mensagens[i]) 
+            dados.push(dado);
+        }
 
-###################### 
-Nome do Cliente: xxxxx 
-Produto: xxxxx 
-Valor unitário: xxxxx 
-Total da compra: xxxxx 
-########################## 
-Obrigado e volte sempre!
+        const cod = dados[0];
+        const produtoSelecionado = produtos[cod - 1]
 
+        if(!produtoSelecionado){
+         alert("Esse produto não existe!");
+        }
 
+        const totalCompra = calc(dados[1], produtoSelecionado[1], imposto);
 
-// MINHA RESOLUCAO
+     
 
-*/
-// debugger
-// let entradas = ["Digite seu nome: ", "Digite o nome do Produto: ", "Digite a quantidade: ", "Digite o valor: "]
+        console.log(`Produto:  ${produtoSelecionado[0]}`);
+        console.log(`Valor Unitario: ${produtoSelecionado[1]}`);
+        console.log(`Total da compra: ${totalCompra}`);
+        console.log(`Imposto cobrado: 20%`);
 
-// let entradaUsuario = []; 
-// for (let iteracao = 0; iteracao < entradas.length; iteracao++){
-//     entradaUsuario[iteracao] = prompt(entradas[iteracao]);
-// }
-
-// let valorTotal = entradaUsuario[2] * entradaUsuario[3]
-
-// let retornoSistema = ["Nome do Cliente: " + entradaUsuario[0], "Nome do Produto: " + entradaUsuario[1], "Valor Unitario: " + entradaUsuario[3], "Total da Compra: " + valorTotal];
-
-// console.log(retornoSistema[])
-
-
-
-// let nomeDoCliente = prompt("Digite seu nome: ")
-// let nomeDoProduto = prompt("Digite o nome do produto: ")
-// let qtdDoProduto = prompt("Digite a quantidade do produto: ")
-// let valorUnitario = prompt("Digite o valor do produto")
-
-// let totalCompra = qtdDoProduto * valorUnitario; 
-
-// console.log("#############################");
-// console.log(`Nome do Cliente: ${nomeDoCliente}`);
-// console.log(`Nome do Produto: ${nomeDoProduto}`);
-// console.log(`Valor Unitário: ${valorUnitario}`);
-// console.log(`Total da Compra: ${totalCompra}`);
-// console.log(`#############################`);
-// console.log("Obrigado e Volte Sempre =D");
+        interromper = confirm('Deseja continuar');
+    }
 
 
-//RESOLUCAO PROFESSOR
-
-// const imposto = 0.2;
-// const camposSaida = [
-//     'Produto: ',
-//     'Valor Unitario: ',
-//     'Total da compra: 20%' ,
-// ];
-
-// const produtos = [
-//     ['Sabão', 2.00],   // cod 1
-//     ['Leite', 5.00],   // cod 2
-//     ['Açucar', 5.50],  // cod 3
-// ];
-
-// const dados = [];
-
-// const mensagens = [
-//     'codigo do produto',
-//     'digite a quantidade',
-// ];
-
-// for (let i = 0; i < mensagens.length; i++) {
-//     let dado = prompt(mensagens[i]);
-//     dados.push(dado);
-// }
-
-// const cod = dados[0]; 
-// const produtoSelecionado = produtos[cod - 1]
-// const totalCompraSemImposto = dados[1] * produtoSelecionado[1]
-// const totalComImposto = totalCompraSemImposto + totalComImposto * imposto 
+})(calculoTotalCompra)
 
 
-// console.log(`${camposSaida[0]} ${produtoSelecionado[0]}`);
-// console.log(`${camposSaida[1]} ${camposSaida[1]}`)
-// console.log(`${camposSaida[2]} ${camposSaida[2]}`)
 
-// console.log(`${camposSaida[2]} ${totalComImposto}`)
+function calculoTotalCompra(quantidade, valorProduto, imposto = null) {
+    const totalCompraSemImposto = quantidade * valorProduto;
+    if (imposto) {
+        const total = totalCompraSemImposto + totalCompraSemImposto * imposto;
+        return total;
+    }
+    return totalCompraSemImposto;
+}
 
+   

@@ -241,3 +241,147 @@ Undefined: quando a variavel não está recebendo nada. Nesse caso, ela foi cria
     //     console.log(dadosPessoais[iteracao])
           
     //     }
+
+
+    //Funções do Js 
+
+    /*
+    Se queremos por exemplo, calcular um imposto, precisamos calcular um valor e que será utilizado em diversos arquivos
+    o calculo de imposto deveria ser universal de forma que possa ser utilizado em varios lugares
+
+    Então podemos criar um metodos/funcao, imgine que toda vez que voce criar um arquivo precisa fazer oi calculo, chega uma hora que 
+    no momento de fazer a manutenção fica ruim. 
+    
+    Para isso, podemos usar as funções, um trecho de código que é chamado em varios lugares para resolver uma tarefa ou problema
+   
+
+   */
+
+    // 
+   //  function calculoImposto(total, taxa){
+   //    return total * taxa
+   //    //console.log('ola'); nada funciona após o return pois o return finalza a função
+   //  }
+
+   //  const texto = calculoImposto(10, 0.2);
+   //  console.log(texto)
+
+    //Programação funcional, significa que podemos transportar uma função dentro de uma variavel
+
+    //essas funções anonimas permitem que voce consiga enviar uma função por parametro dentro de uma outra funcção, chamamos de funções de callback
+
+   
+    
+
+
+    // se eu quero que uma funçã9o me devolva alguma coisa eu coloca return, ela vai devolver algo para outra coisa
+    //metodo é quando ele está dentro de um objeto 
+    // quando não está dentro de um objeto ele é uma função, mudando apenas o escopo/contexto
+
+
+  /*
+Exercicio 1, JS basico Desenvolva um sistema de compra onde o usuario digitará: 
+Nome do Cliente 
+Nome do produto 
+Quantidade que comprou 
+Valor de uma unidade 
+
+
+Seu programa deverá Calcular o total da comrpa e impromir as informações da compra: 
+
+Exemplo de saida 
+
+###################### 
+Nome do Cliente: xxxxx 
+Produto: xxxxx 
+Valor unitário: xxxxx 
+Total da compra: xxxxx 
+########################## 
+Obrigado e volte sempre!
+
+
+
+// MINHA RESOLUCAO
+
+*/
+// debugger
+// let entradas = ["Digite seu nome: ", "Digite o nome do Produto: ", "Digite a quantidade: ", "Digite o valor: "]
+
+// let entradaUsuario = []; 
+// for (let iteracao = 0; iteracao < entradas.length; iteracao++){
+//     entradaUsuario[iteracao] = prompt(entradas[iteracao]);
+// }
+
+// let valorTotal = entradaUsuario[2] * entradaUsuario[3]
+
+// let retornoSistema = ["Nome do Cliente: " + entradaUsuario[0], "Nome do Produto: " + entradaUsuario[1], "Valor Unitario: " + entradaUsuario[3], "Total da Compra: " + valorTotal];
+
+// console.log(retornoSistema[])
+
+// let interromper = true;
+
+// while(interromper){
+//     let nomeDoCliente = prompt("Digite seu nome: ")
+//     let nomeDoProduto = prompt("Digite o nome do produto: ")
+//     let qtdDoProduto = prompt("Digite a quantidade do produto: ")
+//     let valorUnitario = prompt("Digite o valor do produto")
+    
+//     let totalCompra = qtdDoProduto * valorUnitario; 
+    
+//     console.log("#############################");
+//     console.log(`Nome do Cliente: ${nomeDoCliente}`);
+//     console.log(`Nome do Produto: ${nomeDoProduto}`);
+//     console.log(`Valor Unitário: ${valorUnitario}`);
+//     console.log(`Total da Compra: ${totalCompra}`);
+//     console.log(`#############################`);
+//     console.log("Obrigado e Volte Sempre =D");
+//     interromper = confirm("deseja continuar?")
+
+// }
+
+
+
+//RESOLUCAO PROFESSOR
+
+// const imposto = 0.2;
+// const camposSaida = [
+//     'Produto: ',
+//     'Valor Unitario: ',
+//     'Total da compra: 20%' ,
+// ];
+
+// const produtos = [
+//     ['Sabão', 2.00],   // cod 1
+//     ['Leite', 5.00],   // cod 2
+//     ['Açucar', 5.50],  // cod 3
+// ];
+
+// const dados = [];
+
+// const mensagens = [
+//     'codigo do produto',
+//     'digite a quantidade',
+// ];
+
+// for (let i = 0; i < mensagens.length; i++) {
+//     let dado = prompt(mensagens[i]);
+//     dados.push(dado);
+// }
+
+// const cod = dados[0]; 
+// const produtoSelecionado = produtos[cod - 1]
+// const totalCompraSemImposto = dados[1] * produtoSelecionado[1]
+// const totalComImposto = totalCompraSemImposto + totalComImposto * imposto 
+
+
+// console.log(`${camposSaida[0]} ${produtoSelecionado[0]}`);
+// console.log(`${camposSaida[1]} ${camposSaida[1]}`)
+// console.log(`${camposSaida[2]} ${camposSaida[2]}`)
+
+// console.log(`${camposSaida[2]} ${totalComImposto}`)
+
+// todo esse código poderia estar dentro do while, enquanto o teste for verdadeiro, fará o que está la dentro
+// while(true){} para que ele pare é preciso incrementar uma logica
+
+
+    
