@@ -187,7 +187,41 @@
     </div>
     </div>
             
+    <script>
 
+        //por padrao ele segue uma sequencia sincrona, enquantoa prrimeira nao for executada , ele nao pula
+        //js nao trabalha com theads 
+        // console.log('Primeira execução') //1
+        // setTimeout(function(){console.log('timer')}, 2000); //2 em espera em uma fila de processamento, isso é Asincrono!
+        // console.log('Segunda execução') // 3
+        
+        //crianndo uma promisse: função devolve info mas nao sabemos quando elavai vir
+        function myPromise(nota){
+            return new Promise(function(resolve, reject){
+                if(nota <= 7){
+                    resolve('Aprove!')
+                }else{
+                    reject('Reprove!')
+                }
+            })
+        }
+
+        async function exec () {
+            try{
+            const teste = await myPromise(7); // para executar é preciso estar dentro de uma func asyc
+            console.log(teste)
+            } catch(erro){
+                console.log(erro)
+            }
+            
+        }
+
+        exec();
+
+        
+
+
+    </script>
 
     <!-- <script src="js/bootstrap.js"></script> -->
     <script src="js/bootstrap.bundle.js"></script>

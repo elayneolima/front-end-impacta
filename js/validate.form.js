@@ -9,14 +9,24 @@
         
         
         
-        //poderia ser focus
-        nome.addEventListener('blur', ()=>{
-          const cepMemory =  localStorage.getItem('dados-form')
-          const convertCepMemory = JSON.parse(cepMemory)
-          logradouro.value = cepMemory.logradouro
-          cep.value = cepMemory.cep
-
+        const exampleModal = document.getElementById('exampleModal')
+        if (exampleModal) {
+            exampleModal.addEventListener('show.bs.modal', event => {
+            const storage = localStorage.getItem('dados-form');
+            const storageJson = JSON.parse(storage);
+            logradouro.value = storageJson.logradouro
+            cep.value = storageJson.cep
         })
+    }
+
+        //poderia ser focus
+        // nome.addEventListener('blur', ()=>{
+        //   const cepMemory =  localStorage.getItem('dados-form')
+        //   const convertCepMemory = JSON.parse(cepMemory)
+        //   logradouro.value = cepMemory.logradouro
+        //   cep.value = cepMemory.cep
+
+        // })
         
         cep.addEventListener('keyup', (event) => {
             if(event.key === 'Enter'){
