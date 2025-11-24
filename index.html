@@ -13,7 +13,12 @@
     <link rel="stylesheet" href="css/imprimir.css">
     <style>
         .borda-10{
-            border: solid 10px red;
+            border: solid 10px rgb(199, 152, 152);
+        }
+        .erro{
+            border: 1px solid red;
+            outline: solid 1px green;
+            /* background-color: rgb(207, 153, 153); */
         }
     </style>
 </head>
@@ -149,20 +154,24 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-            <form>
-            <div class="mb-3">
-                <label for="recipient-name" class="col-form-label">Recipient:</label>
-                <input type="text" class="form-control" id="recipient-name">
-            </div>
-            <div class="mb-3">
-                <label for="message-text" class="col-form-label">Message:</label>
-                <textarea class="form-control" id="message-text"></textarea>
-            </div>
+            <form id="form-cliente" method="post" action="http://localhost:3001/cliente">
+                <div class="mb-3">
+                    <label for="recipient-name" class="col-form-label">Nome</label>
+                    <input type="text" class="form-control" id="recipient-name" name="nome">
+                </div>
+                <div class="mb-3">
+                    <label for="message-text" class="col-form-label">Messagem:</label>
+                    <textarea class="form-control" id="message-text" name="mensagem"></textarea>
+                </div>
+                
+                
+            
             </form>
         </div>
         <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Send message</button>
+            <button class="btn btn-primary" data-submit-btn="btn">Enviar</button>
+            <!-- <button type="submit" class="btn btn-primary" data-submit-btn="btn">Enviar</button> -->
         </div>
         </div>
     </div>
@@ -176,13 +185,12 @@
     <!-- <script src="js/calculos.js"></script>
     <script src="js/exercicio1.js"></script> -->
     <!-- <script src="js/introducao.objeto.js"></script> -->
+      <script src="js/validate.form.js"></script>
      <!-- <script src="js/dom.js"></script> -->
       <script src="js/active.menu.js"></script>
       <script src="js/consumer.js"></script>
+     
    
-
-
-
 </body>
 
 </html> 
