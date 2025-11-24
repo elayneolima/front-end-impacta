@@ -10,6 +10,12 @@
     <link rel="stylesheet" href="css/custom.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/icons.css">
+    <link rel="stylesheet" href="css/imprimir.css">
+    <style>
+        .borda-10{
+            border: solid 10px red;
+        }
+    </style>
 </head>
 
 <body>
@@ -25,22 +31,22 @@
                     <nav>
                         <ul class="menu-itens">
                             <li class="ativa-menu">
-                                <a href="#" class="item active" data-clean-item="item">
+                                <a href="#" class="item active" data-clean-item="item" data-clean="item">
                                     Home
                                 </a>
 
                             </li>
-                            <li><a href="#" class="item" data-clean-item="item">About us</a></li>
-                            <li><a href="#" class="item" data-clean-item="item">Service</a></li>
-                            <li><a href="#" class="item" data-clean-item="item">Blog</a></li>
-                            <li><a href="#" class="item" data-clean-item="item">Contact</a></li>
+                            <li><a href="#" class="item" data-clean-item="item" data-clean="item">About us</a></li>
+                            <li><a href="#" class="item" data-clean-item="item" data-clean="item">Service</a></li>
+                            <li><a href="#" class="item" data-clean-item="item" data-clean="item">Blog</a></li>
+                            <li><a href="#" class="item" data-clean-item="item" data-clean="item">Contact</a></li>
                         </ul>
 
                     </nav>
                 </div>
                 <div class="get-a-quote">
                     <a href="#">
-                        <button class="btn-green">Get a Quote</button>
+                        <button class="btn-green" onclick="window.print()">Imprimir</button>
                     </a>
             </div>
         </div>
@@ -80,7 +86,7 @@
                    <div class="card-section">
 
                        <div class="card">
-                           <img src="images/card1.svg"  alt="">   
+                           <img src="images/card1.svg"  alt="" class="img">   
                            <div class="card-body">
                                <h5 class="card-title">Office Cleaning</h5>
                                <p class="card-text">While we can customize your cleaning plan to suit your needs, most clients schedule regular cleaning services:</p>
@@ -88,7 +94,7 @@
                            </div>
                        </div>
                         <div class="card">
-                           <img src="images/card2.svg"  alt="">   
+                           <img src="images/card2.svg"  alt="" class="img">   
                            <div class="card-body">
                                <h5 class="card-title">Spring Cleaning</h5>
                                <p class="card-text">While we can customize your cleaning plan to suit your needs, most clients schedule regular cleaning services:</p>
@@ -96,7 +102,7 @@
                            </div>
                        </div>
                         <div class="card">
-                           <img src="images/cad3.svg"  alt="">   
+                           <img src="images/cad3.svg"  alt="" class="img">   
                            <div class="card-body">
                                <h5 class="card-title">House Cleaning</h5>
                                <p class="card-text">While we can customize your cleaning plan to suit your needs, most clients schedule regular cleaning services:</p>
@@ -104,7 +110,6 @@
                            </div>
 
                    </div>
-
                    </div>
                
     </section>
@@ -132,26 +137,9 @@
             </div>
         </div>
     </section>
-    <section>
 
-    </section>
-    <footer>
-        
-    </footer>
 
-  
 
-    <!-- <script src="./js/exercicio1.js"></script> -->
-    <script src="js/active.menu.js"></script>
-    <script src="js/consumer.js"></script>
-    <!-- <script src="js/bootstrap.js"></script> -->
-    <script src="js/bootstrap.bundle.js"></script>
-
-<div class="screen">
-        <div class="popup">
-            <!-- Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem, porro. Magni optio sit doloribus quo, quas veniam sunt, quaerat accusamus minima distinctio soluta a, tempora placeat aperiam dignissimos omnis unde. -->
-        </div>
-    </div>
 
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -161,49 +149,38 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-            <form method="get" action="http://www.teste.com.br/dados/">
-                <div class="mb-3">
-                    <label for="recipient-name" class="col-form-label">Nome:</label>
-                    <input type="text" class="form-control" id="recipient-name" name="nome">
-                </div>
-                
-                <div class="mb-3">
-                    <label for="message-text" class="col-form-label">Mensagem:</label>
-                    <textarea class="form-control" id="message-text" name="mensagem"></textarea>
-                </div>
-                <div class="mb-3">
-                    <label for="estado">Selecione seu estado</label>
-                
-                    <select class="form-control" name="estado" id="estado" class="col-form-label">
-                        <option value="0">-- select --</option>
-                        <option value="sp">São Paulo</option>
-                        <option value="mg">Minas Gerais</option>
-                    </select>
-                </div>
-
-                <div class="mb-3">
-                    senha: <input required class="form-control" type="password" name="senha"  placeholder="sua senha">
-                </div>
-                <div class="mb-3">
-                    conrtato: <input type="checkbox" name="contrato" value="sim">
-                </div>
-
-                <div class="mb-3">
-                    Email: <input required class="form-control" type="email" name="email"  placeholder="seu email">
-                </div>
-
-            
-                <button class="btn btn-primary">Enviar</button>
-
+            <form>
+            <div class="mb-3">
+                <label for="recipient-name" class="col-form-label">Recipient:</label>
+                <input type="text" class="form-control" id="recipient-name">
+            </div>
+            <div class="mb-3">
+                <label for="message-text" class="col-form-label">Message:</label>
+                <textarea class="form-control" id="message-text"></textarea>
+            </div>
             </form>
         </div>
         <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Enviar</button>
+            <button type="button" class="btn btn-primary">Send message</button>
         </div>
         </div>
     </div>
     </div>
+            
+
+
+    <!-- <script src="js/bootstrap.js"></script> -->
+    <script src="js/bootstrap.bundle.js"></script>
+    <!-- <script src="js/introducao.js"></script> -->
+    <!-- <script src="js/calculos.js"></script>
+    <script src="js/exercicio1.js"></script> -->
+    <!-- <script src="js/introducao.objeto.js"></script> -->
+     <!-- <script src="js/dom.js"></script> -->
+      <script src="js/active.menu.js"></script>
+      <script src="js/consumer.js"></script>
+   
+
 
 
 </body>

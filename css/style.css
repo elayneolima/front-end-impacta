@@ -305,6 +305,23 @@ h1{
     margin: auto;
     /* border:5px  #000000 solid; */
 }
+
+
+.form-content{
+    background-color: aqua;
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+    padding: 40px 0;
+}
+
+.form-contact{
+    background-color: aquamarine;
+}
+
+
+
+
 /*media query
 
 Ela vai ajudar na aplicação de CSS para identificar um tamanho de tela de usuário 
@@ -326,6 +343,8 @@ Extra Large         xl                   >-1200px
 Extra extra Large   xxl                  >-1400px 
 
 */
+
+
 
 
 @media screen and (max-width: 992px){

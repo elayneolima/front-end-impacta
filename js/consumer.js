@@ -1,8 +1,8 @@
-(function(active){
-    new active(
-        '[data-clean-item="item"]',
-        '.menu-itens', 
-        'active'
-    ).activeItemMenu();
-
+(function(activeLink){
+    const active = new activeLink(
+        '[data-clean="item"]',
+         '.menu-itens',
+          'active'
+        )
+    active.getItens()
 })(window.ActiveLink)
