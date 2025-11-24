@@ -18,14 +18,14 @@ app.get('/hello', (request, response) => {
 app.get('/cliente', (request, response) => {
     console.log(request.query);
     fs.writeFileSync('teste.json', JSON.stringify(request.query));
-    response.redirect('http://127.0.0.1:5501/index.html?sucesso');
+    response.redirect('http://127.0.0.1:5501/index.html');
 });
 
 app.post('/cliente', (request, response) => {
     console.log("Dados: ", request.body);
     fs.writeFileSync('teste.json', JSON.stringify(request.query));
     // response.redirect('http://127.0.0.1:5501/index.html?sucesso');
-    response.json({status: 'sucesso'})//erro de CORS, enviando requisisções para endereços diferentes
+    response.status(200).json({status: 'Dados cadastrados com sucesso!'})//erro de CORS, enviando requisisções para endereços diferentes
 });
 
 app.listen(port, host, function(){

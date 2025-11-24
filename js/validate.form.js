@@ -3,16 +3,15 @@
         const form = doc.getElementById('form-cliente')
         const nome = doc.getElementById('recipient-name');
         const mensagem = doc.getElementById('message-text')
+        const avisoResposta = doc.querySelector('[data-resposta="mensagem"]')
+
         btn.addEventListener('click', (event) => {
+            event.preventDefault();
             if(validacao()){
               enviarFormulario(form, nome.value, mensagem.value)
             }
+        
          
-            
-          // form.submit();
-          console.log('send form')
-          
-
         })
 
         //o que está dentro de value é uma string!
@@ -37,7 +36,7 @@
         function enviarFormulario(form, nome, mensagem){
           const xhr = new XMLHttpRequest()//essa func construtora é do proprio js, para requisisções
           // METODO / CAMINHO
-          xhr.open('post', 'http://localhost:3001/cliente')//serve para abrir uma conexão com o servidor
+          xhr.open('POST', 'http://localhost:3001/cliente')//serve para abrir uma conexão com o servidor
 
 
          //FORMATO JSON deve ser uma string ``, as propriedades precisam estar entre asas
@@ -46,8 +45,15 @@
          
          //aguarda uma resposta do servidor
          xhr.onreadystatechange = function(){
-          if (xhr.readyState == 4){
-            console.log(xhr.responseText)// é onde fica guardada a informação quevem da response
+          if (xhr.readyState === 4 && xhr.status === 200){
+            
+            //converte a string que chega em um opbjeto
+            const dados = JSON.parse(xhr.responseText); 
+            avisoResposta.innerHTML = dados.status;
+            console.log(dados.status)// é onde fica guardada a informação quevem da response
+          }
+          else if (xhr.readyState === 4 && xhr.status === 400){
+             console.log(xhr.responseText)
           }
          }
           xhr.setRequestHeader('Content-Type', 'application/json')
@@ -56,7 +62,8 @@
          //JSON É UM FORMATO DE ARQUIVOI PARA ENVIAR INFO PRO SERVIDOR PRO CLIENTE ETC. 
           xhr.send(json)
         }
-
+        // const resp = {status: 'Dados cadastrados'}
+        // console.log(resp.status)
 
   })(document)
 
