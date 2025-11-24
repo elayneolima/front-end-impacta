@@ -1,0 +1,16 @@
+{
+  "name": "servidor-clean",
+  "version": "1.0.0",
+  "description": "servidor para comunicacao com front",
+  "license": "ISC",
+  "author": "lana",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0"
+  }
+}
