@@ -66,7 +66,7 @@
                
 
                     <div class="main-buttons">
-                        <a href="" class="btn-green">Get Start Now</a>
+                        <a href="#" class="btn-green" data-start="now">Get Start Now</a>
                         <a href="" class="btn-opc">View all Services</a>
                     </div>
                 </div>
@@ -124,7 +124,6 @@
             <div class="section-solution">
                 <div class="section-content">
 
-                  
                     <div class="text-content">
                         <p>Affordable cleaning solutions</p>
                         <h2>High-Quality and Friendly Services at Fair Prices</h2>
@@ -187,41 +186,7 @@
     </div>
     </div>
             
-    <script>
-
-        //por padrao ele segue uma sequencia sincrona, enquantoa prrimeira nao for executada , ele nao pula
-        //js nao trabalha com theads 
-        // console.log('Primeira execução') //1
-        // setTimeout(function(){console.log('timer')}, 2000); //2 em espera em uma fila de processamento, isso é Asincrono!
-        // console.log('Segunda execução') // 3
-        
-        //crianndo uma promisse: função devolve info mas nao sabemos quando elavai vir
-        function myPromise(nota){
-            return new Promise(function(resolve, reject){
-                if(nota <= 7){
-                    resolve('Aprove!')
-                }else{
-                    reject('Reprove!')
-                }
-            })
-        }
-
-        async function exec () {
-            try{
-            const teste = await myPromise(7); // para executar é preciso estar dentro de uma func asyc
-            console.log(teste)
-            } catch(erro){
-                console.log(erro)
-            }
-            
-        }
-
-        exec();
-
-        
-
-
-    </script>
+    
 
     <!-- <script src="js/bootstrap.js"></script> -->
     <script src="js/bootstrap.bundle.js"></script>
@@ -230,11 +195,128 @@
     <script src="js/exercicio1.js"></script> -->
     <!-- <script src="js/introducao.objeto.js"></script> -->
       <script src="js/validate.form.js"></script>
-     <!-- <script src="js/dom.js"></script> -->
+     <script src="js/dom.js"></script>
       <script src="js/active.menu.js"></script>
       <script src="js/consumer.js"></script>
-     
-   
+      <script src="js/lib.js"></script>
+      <script src="js/jquery-3.7.1.js"></script>
+      
+      <script>
+        //isso é uma função do jquery
+        $(function(){
+
+
+
+            const contexto = $('.main-buttons')
+            const btn = $('.btn-green', contexto)
+
+            btn.each(function(){
+                $(this).fadeOut(1000).fadeIn(3000)
+            })
+
+            //const contexto = $('.content-buttons') é o pai
+            // const btn = $('.btn-green', centexto) pega os btn-green somente desse pai
+            //selecionando obj
+            
+            
+
+
+           //const btnNow =  $('[data-start="now"]')
+           //colocando clique no botao
+           //btnNow.click(function(){
+                //o mesmo seletor do css é o do jquery, #btn ou .btn dentro da funcao funciona!
+                //this aponta para o objeto clicado
+                // $(this).fadeOut().fadeIn()
+
+        //    });
+        })
+        //por padrao ele segue uma sequencia sincrona, enquantoa prrimeira nao for executada , ele nao pula
+        //js nao trabalha com theads 
+        // console.log('Primeira execução') //1
+        // setTimeout(function(){console.log('timer')}, 2000); //2 em espera em uma fila de processamento, isso é Asincrono!
+        // console.log('Segunda execução') // 3
+        
+        //crianndo uma promisse: função devolve info mas nao sabemos quando elavai vir
+        // function myPromise(nota){
+        //     return new Promise(function(resolve, reject){
+
+
+        //         if(nota <= 7){
+        //             setTimeout(function(){
+        //                  resolve('Aprove!')
+        //             }, 5000)
+                   
+        //         }else{
+        //             reject('Reprove!')
+        //         }
+        //     })
+        // }
+
+        // async function exec () {
+        //     try{
+        //     const teste = await myPromise(7); // para executar é preciso estar dentro de uma func asyc
+        //     console.log(teste)
+        //     } catch(erro){
+        //         console.log(erro)
+        //     }
+            
+        // }
+
+        // exec();
+        // setInterval(function(){
+        //     const data = new Date()
+
+        //     const options ={
+        //     weekday: 'long',
+        //     year: 'numeric',
+        //     month: 'long', 
+        //     day: 'numeric'
+        // }
+
+        //     document.title = data.toLocaleDateString("pt-BR", options)
+        //     console.log(data.toLocaleDateString("pt-BR", options))
+        //     // .getMonth()
+        //     // .getSeconds()
+        // }, 1000)
+        
+        // let lista = [1, 5, 7, 9, 8, 8]
+
+        // let busca = lista.some(function(element){
+        //     return element == 1 
+        // })
+        //map, filter, find, some...
+
+        // let lista = 'Texto'
+
+        // let busca = lista('x')
+        //   console.log(busca)
+        //sempre que nao achar retorna -1
+
+        
+        //_ serve para deixar visualmente melhor no CÓDIGO 
+        // let salario = 10_548.978
+        //conversao pra str
+        // let convert = string(salario)
+
+        //trunc deleta as casas decimais
+        //round arredonda as casas decimais
+        // let ajuste = Math.round( 10_548.978)
+        // //replace só trabalha com str
+        // //.replace('.', ',')
+        // console.log(ajuste)
+
+        //trim remove os espaços em branco
+        // let nome = '                        lana              '
+        // let limpa = nome.trim()
+        // console.log(limpa)
+       
+        // const lib = window.lib
+        //  console.log(lib)
+        // const btnNow = lib('[data-start="now"]')
+        // btnNow.addEventListener('click', function(){
+        //     console.log('agora!')
+        // })
+      </script>
 </body>
 
 </html> 

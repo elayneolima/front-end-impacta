@@ -26,6 +26,8 @@ app.post('/cliente', (request, response) => {
     fs.writeFileSync('teste.json', JSON.stringify(request.query));
     // response.redirect('http://127.0.0.1:5501/index.html?sucesso');
     response.status(200).json({status: 'Dados cadastrados com sucesso!'})//erro de CORS, enviando requisisções para endereços diferentes
+    // response.(new Date()) - Pesquisar por date zone
+
 });
 
 app.listen(port, host, function(){
